@@ -3,3 +3,9 @@ h1 {
   font-family: Arial;
   text-align: center;
 }
+
+/* table */
+#buttons {
+  background: LightBlue;
+  padding: 10px;  
+}
