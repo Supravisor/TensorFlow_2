@@ -3,3 +3,21 @@ h1 {
   font-family: Arial;
   text-align: center;
 }
+
+/* table */
+#buttons {
+  background: LightBlue;
+  padding: 10px;  
+}
+
+#preview {
+  height: 70vh;
+  border-radius: 7px;
+  background: rgb(150, 150, 150);
+}
+
+#buttons, #preview {
+  width: 38vw;
+  border: 3px solid black;
+  color: black;
+}
