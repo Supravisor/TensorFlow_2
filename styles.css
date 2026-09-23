@@ -5,6 +5,10 @@ h1 {
 }
 
 /* table */
+table {
+  margin: auto;
+}
+
 #buttons {
   background: LightBlue;
   padding: 10px;  
