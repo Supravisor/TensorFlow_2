@@ -61,3 +61,7 @@ td {
   background: #5cb85c;
   border-color: green;
 }
+
+.btn-success {
+  color: white;
+}
