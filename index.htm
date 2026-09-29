@@ -24,7 +24,7 @@
   <p>
     <input type="button" class="btn btn-module" value="modules" onclick="document.editor.textbox.value+='\nfrom __future__ import absolute_import, division, print_function, unicode_literals\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\nfrom IPython.display import clear_output\nfrom six.moves import urllib\nimport tensorflow.compat.v2.feature_column as fc\nimport tensorflow as tf'" />
     <input type="button" class="btn btn-success" value="sample dataset" onclick="document.editor.textbox.value+='\nx = [1, 2, 3, 4, 5]\ny = [1, 3, 8, 10, 14]\nplt.plot(x, y, \'ro\')\nplt.axis([0, 6, 0, 15])\nx_unique = np.unique(x)\npoly_func = np.poly1d(np.polyfit(x, y, 1))\nplt.plot(x_unique, poly_func(x_unique))\nplt.show()\n'" />
-    <input type="button" class="btn btn-success" value="load dataset" onclick="document.editor.textbox.value+=''" />
+    <input type="button" class="btn btn-success" value="load dataset" onclick="document.editor.textbox.value+='\ndftrain = pd.read_csv(\'https://storage.googleapis.com/tf-datasets/titanic/train.csv\') # training data'" />
   </p>
 
 </div>
