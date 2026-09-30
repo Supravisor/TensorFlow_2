@@ -30,6 +30,7 @@
   <p>
     <input type="button" class="btn btn-success" value="age" onclick="document.editor.textbox.value+='\ndftrain.age.hist(bins=20)'" />
     <input type="button" class="btn btn-success" value="gender" onclick="document.editor.textbox.value+='\ndftrain.sex.value_counts().plot(kind=\'barh\')'" />
+    <input type="button" class="btn btn-success" value="class" onclick="document.editor.textbox.value+='\ndftrain[\'class\'].value_counts().plot(kind=\'barh\')'" />
   </p>
 
 </div>
