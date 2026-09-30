@@ -27,6 +27,17 @@
     <input type="button" class="btn btn-success" value="load dataset" onclick="document.editor.textbox.value+='\ndftrain = pd.read_csv(\'https://storage.googleapis.com/tf-datasets/titanic/train.csv\') # training data\ndfeval = pd.read_csv(\'https://storage.googleapis.com/tf-datasets/titanic/eval.csv\') # testing data\ny_train = dftrain.pop(\'survived\')\ny_eval = dfeval.pop(\'survived\')'" />
   </p>
 
+  <p>
+    <input type="button" class="btn btn-success" value="age" onclick="document.editor.textbox.value+='\ndftrain.age.hist(bins=20)'" />
+    <input type="button" class="btn btn-success" value="gender" onclick="document.editor.textbox.value+='\ndftrain.sex.value_counts().plot(kind=\'barh\')'" />
+    <input type="button" class="btn btn-success" value="class" onclick="document.editor.textbox.value+='\ndftrain[\'class\'].value_counts().plot(kind=\'barh\')'" />
+    <input type="button" class="btn btn-success" value="stats" onclick="document.editor.textbox.value+='\npd.concat([dftrain, y_train], axis=1).groupby(\'sex\').survived.mean().plot(kind=\'barh\').set_xlabel(\'% survive\')'" />
+  </p>
+
+  <p>
+    <input type="button" class="btn btn-success" value="list of features" onclick="document.editor.textbox.value+=''" />
+  </p>
+
 </div>
           </td>
           <td id="textbox">
