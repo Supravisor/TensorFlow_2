@@ -27,6 +27,10 @@
     <input type="button" class="btn btn-success" value="load dataset" onclick="document.editor.textbox.value+='\ndftrain = pd.read_csv(\'https://storage.googleapis.com/tf-datasets/titanic/train.csv\') # training data\ndfeval = pd.read_csv(\'https://storage.googleapis.com/tf-datasets/titanic/eval.csv\') # testing data\ny_train = dftrain.pop(\'survived\')\ny_eval = dfeval.pop(\'survived\')'" />
   </p>
 
+  <p>
+    <input type="button" class="btn btn-success" value="age" onclick="document.editor.textbox.value+='\ndftrain.age.hist(bins=20)'" />
+  </p>
+
 </div>
           </td>
           <td id="textbox">
