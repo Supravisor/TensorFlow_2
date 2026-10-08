@@ -36,6 +36,7 @@
 
   <p>
     <input type="button" class="btn btn-success" value="list of features" onclick="document.editor.textbox.value+='\nCATEGORICAL_COLUMNS = [\'sex\', \'n_siblings_spouses\',\n    \'parch\', \'class\', \'deck\',\n    \'embark_town\', \'alone\']\n\nNUMERIC_COLUMNS = [\'age\', \'fare\']\n\nfeature_columns = []\nfor feature_name in CATEGORICAL_COLUMNS:\n    vocabulary = dftrain[feature_name].unique()  # gets a list of all unique values from given feature column\n    feature_columns.append(tf.feature_column.categorical_column_with_vocabulary_list(feature_name, vocabulary))\n\nfor feature_name in NUMERIC_COLUMNS:\n    feature_columns.append(tf.feature_column.numeric_column(feature_name, dtype=tf.float32))\n'" />
+    <input type="button" class="btn btn-success" value="input function" onclick="document.editor.textbox.value+='\ndef make_input_fn(data_df, label_df, num_epochs=10, shuffle=True, batch_size=32):\n    def input_function():'" />
   </p>
 
 </div>
