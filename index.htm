@@ -40,6 +40,10 @@
     <input type="button" class="btn btn-success" value="linear estimator" onclick="document.editor.textbox.value+='\nlinear_est = tf.estimator.LinearClassifier(feature_columns=feature_columns)'" />
   </p>
 
+  <p>
+    <input type="button" class="btn btn-success" value="train model" onclick="document.editor.textbox.value+='\nlinear_est.train(train_input_fn)\nresult = linear_est.evaluate(eval_input_fn)\nprint(result[\'accuracy\'])\n'" />
+  </p>
+
 </div>
           </td>
           <td id="textbox">
