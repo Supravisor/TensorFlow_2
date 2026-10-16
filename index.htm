@@ -42,7 +42,7 @@
 
   <p>
     <input type="button" class="btn btn-success" value="train model" onclick="document.editor.textbox.value+='\nlinear_est.train(train_input_fn)\nresult = linear_est.evaluate(eval_input_fn)\nprint(result[\'accuracy\'])\n'" />
-    <input type="button" class="btn btn-success" value="prediction" onclick="document.editor.textbox.value+='\npred_dicts = list(linear_est.predict(eval_input_fn))\nprobs = pd.Series([pred[\'probabilities\'][1] for pred in pred_dicts])\n\nprobs.plot(kind=\'hist\', bins=20, title=\'predicted probabilities\')\n\nprint(pred_dicts[0][\'probabilities\'])'" />
+    <input type="button" class="btn btn-success" value="prediction" onclick="document.editor.textbox.value+='\npred_dicts = list(linear_est.predict(eval_input_fn))\nprobs = pd.Series([pred[\'probabilities\'][1] for pred in pred_dicts])\n\nprobs.plot(kind=\'hist\', bins=20, title=\'predicted probabilities\')\n\nprint(pred_dicts[0][\'probabilities\'])\nprint(dfeval.loc[0])'" />
   </p>
 
   </p>
