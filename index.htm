@@ -29,10 +29,7 @@
   </p>
 
   <p>
-    <input type="button" class="btn btn-success" value="age" onclick="document.editor.textbox.value+='\ndftrain.age.hist(bins=20)\n'" />
-    <input type="button" class="btn btn-success" value="gender" onclick="document.editor.textbox.value+='\ndftrain.sex.value_counts().plot(kind=\'barh\')\n'" />
-    <input type="button" class="btn btn-success" value="class" onclick="document.editor.textbox.value+='\ndftrain[\'class\'].value_counts().plot(kind=\'barh\')\n'" />
-    <input type="button" class="btn btn-success" value="stats" onclick="document.editor.textbox.value+='\npd.concat([dftrain, y_train], axis=1).groupby(\'sex\').survived.mean().plot(kind=\'barh\').set_xlabel(\'% survive\')\n'" />
+    <input type="button" class="btn btn-success" value="build inputs" onclick="document.editor.textbox.value+='\n# 3. Build inputs and dynamic Keras preprocessing layers\nall_inputs = {}\nencoded_features = []\n'" />
   </p>
 
   <p>
