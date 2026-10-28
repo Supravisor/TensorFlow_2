@@ -39,7 +39,8 @@
 
   <p>
     <input type="button" class="btn btn-module" value="modules" onclick="document.editor.textbox.value+='\nimport tensorflow as tf\nimport pandas as pd\nimport numpy as np\n'" />
-    <input type="button" class="btn btn-success" value="define names and categories" onclick="document.editor.textbox.value+='# Define names and categories\nCSV_COLUMN_NAMES = ['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth', 'Species']\nSPECIES = ['Setosa', 'Versicolor', 'Virginica']\n'" />
+    <input type="button" class="btn btn-success" value="define names and categories" onclick="document.editor.textbox.value+='\n# Define names and categories\nCSV_COLUMN_NAMES = ['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth', 'Species']\nSPECIES = ['Setosa', 'Versicolor', 'Virginica']\n'" />
+    <input type="button" class="btn btn-success" value="download datasets" onclick="document.editor.textbox.value+='\n# Download datasets\ntrain_path = tf.keras.utils.get_file(\'iris_training.csv\', \'https://raw.githubusercontent.com/Supravisor/TensorFlow_2/refs/heads/main/classification/\')\ntest_path = tf.keras.utils.get_file(\'iris_test.csv\', \'https://raw.githubusercontent.com/Supravisor/TensorFlow_2/refs/heads/main/classification/\')\n'" />
   </p>
 
 </div>
