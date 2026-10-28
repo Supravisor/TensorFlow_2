@@ -44,6 +44,8 @@
     <input type="button" class="btn btn-success" value="load datasets" onclick="document.editor.textbox.value+='\n# Load dataset into Pandas DataFrames\ntrain = pd.read_csv(train_path, names=CSV_COLUMN_NAMES, header=0)\ntest = pd.read_csv(test_path, names=CSV_COLUMN_NAMES, header=0)\n'" />
     <input type="button" class="btn btn-success" value="separate features from labels" onclick="document.editor.textbox.value+='\n# Separate features from labels\ntrain_y = train.pop(\'Species\')\ntest_y = test.pop(\'Species\')\n'" />
     <input type="button" class="btn btn-success" value="build neural network" onclick="document.editor.textbox.value+='\n# Build the Keras Neural Network\nmodel = tf.keras.Sequential([\n    tf.keras.layers.Input(shape=(4,)),             # 4 input features\n    tf.keras.layers.Dense(30, activation=\'relu\'),  # First hidden layer (30 units)\n    tf.keras.layers.Dense(10, activation=\'relu\'),  # Second hidden layer (10 units)\n    tf.keras.layers.Dense(3, activation=\'softmax\') # Output layer (3 classes)\n])\n'" />
+    <input type="button" class="btn btn-success" value="compile model" onclick="document.editor.textbox.value+='\n# Compile the model\n
+model.compile(\n    optimizer='adam',\n    loss='sparse_categorical_crossentropy',\n    metrics=['accuracy']\n)\n'" />
   </p>
 
 </div>
