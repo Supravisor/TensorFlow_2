@@ -46,6 +46,7 @@
     <input type="button" class="btn btn-success" value="build neural network" onclick="document.editor.textbox.value+='\n# Build the Keras Neural Network\nmodel = tf.keras.Sequential([\n    tf.keras.layers.Input(shape=(4,)),             # 4 input features\n    tf.keras.layers.Dense(30, activation=\'relu\'),  # First hidden layer (30 units)\n    tf.keras.layers.Dense(10, activation=\'relu\'),  # Second hidden layer (10 units)\n    tf.keras.layers.Dense(3, activation=\'softmax\') # Output layer (3 classes)\n])\n'" />
     <input type="button" class="btn btn-success" value="compile model" onclick="document.editor.textbox.value+='\n# Compile the model\nmodel.compile(\n    optimizer=\'adam\',\n    loss=\'sparse_categorical_crossentropy\',\n    metrics=[\'accuracy\']\n)\n'" />
     <input type="button" class="btn btn-success" value="train model" onclick="document.editor.textbox.value+='\n# Train the model\nmodel.fit(\n    train.values,\n    train_y.values,\n    epochs=150,\n    batch_size=256,\n    shuffle=True,\n    verbose=1\n)\n'" />
+    <input type="button" class="btn btn-success" value="evaluate model" onclick="document.editor.textbox.value+='\n# Evaluate the model on the test set\nloss, accuracy = model.evaluate(test.values, test_y.values, verbose=0)\nprint(f\'\nTest set accuracy: {accuracy:0.3f}\')\n'" />
   </p>
 
 </div>
