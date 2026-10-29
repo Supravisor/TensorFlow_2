@@ -47,6 +47,7 @@
     <input type="button" class="btn btn-success" value="interactive prediction" onclick="document.editor.textbox.value+='\n# Interactive prediction\nfeatures = [\'SepalLength\', \'SepalWidth\', \'PetalLength\', \'PetalWidth\']\npredict_values = []\n'" />
     <input type="button" class="btn btn-success" value="user input" onclick="document.editor.textbox.value+='\n# User input\nprint(\'Please type numeric values as prompted.\')\nfor feature in features:\n    while True:\n        val = input(feature + \': \')\n        print(f\'{feature}: {val}\')\n        try:\n            predict_values.append(float(val))\n            break\n        except ValueError:\n            print(\'Invalid input. Please enter a valid number.\')\n'" />
     <input type="button" class="btn btn-success" value="reshape list" onclick="document.editor.textbox.value+='\n# Reshape list to standard Keras expected shape: (batch_size, num_features) -> (1, 4)\ninput_data = np.array([predict_values])\n'" />
+    <input type="button" class="btn btn-success" value="prediction pipeline" onclick="document.editor.textbox.value+='\n# Run Keras prediction pipeline\npredictions = model.predict(input_data, verbose=0)\n'" />
   </p>
 
 </div>
